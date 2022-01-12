@@ -1,0 +1,10 @@
+<div>
+    <h3><%=@user.name%></h3>
+    <%=image_tag @user.get_profile_image("100x100")%>
+    <%if @user==current_user%>
+    <p><%=link_to '編集',edit_user_path(@user)%></p>
+    <%end%>
+    
+</div>
+
+<%=render 'post_image/list',post_images@post_images%>
